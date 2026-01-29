@@ -61,8 +61,8 @@ const Projects = () => {
       tags: ['Laravel', 'Blade', 'React JS', 'MySQL', 'WhatsApp Ordering'],
       image: gracieesFoodstuff,
       category: 'fullstack',
-      github: '#',
-      live: '#',
+      github: 'https://github.com/ojingwaDaniel/Graciee-s-Foodstuff-Export',
+      live: 'https://graciees-foodstuff-export.netlify.app/',
     },
   {
   id: 5,
