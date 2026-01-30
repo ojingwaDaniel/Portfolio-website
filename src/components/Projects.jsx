@@ -31,7 +31,7 @@ const Projects = () => {
       category: 'fullstack',
       github: 'https://github.com/ojingwaDaniel/invoice-payment-system',
       live: 'https://invonix.bcommz.com/login',
-      featured: true,
+      
     },
     {
       id: 2,
@@ -42,7 +42,7 @@ const Projects = () => {
       category: 'frontend',
       github: 'https://github.com/ojingwaDaniel/Bildup-Agency-website',
       live: 'https://bildup.net/',
-      featured: true,
+  
     },
     {
       id: 3,
