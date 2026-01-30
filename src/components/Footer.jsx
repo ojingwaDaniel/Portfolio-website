@@ -54,7 +54,7 @@ const Footer = () => {
           <div className="flex items-center text-dark-600 dark:text-dark-300">
             Made with
             <Heart className="w-4 h-4 mx-2 text-red-500 fill-red-500 animate-pulse" />
-            by Full-Stack Developer
+            by Ojingwa Daniel
           </div>
         </div>
       </div>
