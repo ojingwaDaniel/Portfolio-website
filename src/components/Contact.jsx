@@ -101,27 +101,7 @@ const Contact = () => {
     if (error) setError('');
   };
 
-  // Test EmailJS connection
-  const testEmailJS = async () => {
-    try {
-      const testResult = await emailjs.send(
-        EMAILJS_SERVICE_ID,
-        EMAILJS_TEMPLATE_ID,
-        {
-          name: 'Test User',
-          email: 'test@example.com',
-          subject: 'Test Email',
-          message: 'This is a test email from your portfolio contact form.'
-        },
-        EMAILJS_PUBLIC_KEY
-      );
-      console.log('EmailJS test successful:', testResult);
-      showNotification('success', 'EmailJS connection test successful!');
-    } catch (error) {
-      console.error('EmailJS test failed:', error);
-      showNotification('error', `EmailJS test failed: ${error.message || 'Unknown error'}`);
-    }
-  };
+ 
 
   const contactInfo = [
     {
@@ -208,14 +188,7 @@ const Contact = () => {
         </motion.div>
       )}
       
-      {/* Test EmailJS Button (Remove in production) */}
-      <button
-        onClick={testEmailJS}
-        className="fixed bottom-4 right-4 z-50 px-4 py-2 bg-yellow-500 text-white rounded-lg text-sm opacity-50 hover:opacity-100 transition-opacity"
-        title="Test EmailJS Connection"
-      >
-        Test Email
-      </button>
+     
       
       <div className="container mx-auto px-6">
         {/* Section Header */}
