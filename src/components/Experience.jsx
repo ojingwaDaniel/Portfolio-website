@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Briefcase, Calendar, MapPin, Award, TrendingUp, Users } from 'lucide-react';
+import { Briefcase, MapPin, Award, TrendingUp, Users } from 'lucide-react';
 
 const Experience = () => {
  const experiences = [

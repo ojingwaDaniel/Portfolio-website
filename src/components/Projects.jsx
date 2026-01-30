@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { ExternalLink, Github, Eye, Code2, Server, Smartphone, Shield, Wrench, Monitor, Settings, Cpu, Network } from 'lucide-react';
+import { ExternalLink, Github, Eye, Code2, Server, Smartphone, Shield,Settings} from 'lucide-react';
 
 import Invonix from "../../src/assets/dashboard.png";
 import bildup from "../../src/assets/bildup.png";
@@ -334,8 +334,9 @@ const Projects = () => {
               <ExternalLink className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </a>
             <a
-              href="#"
+              href="/Ojingwa_Daniel_Resume.docx"
               className="inline-flex items-center px-8 py-4 rounded-full glass-effect hover:bg-white/20 dark:hover:bg-dark-800/20 transition-all duration-300 group"
+              rel="noopener noreferrer"
             >
               <span className="mr-3">Download Resume</span>
               <Eye className="w-5 h-5 group-hover:scale-110 transition-transform" />

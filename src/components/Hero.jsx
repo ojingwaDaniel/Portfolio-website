@@ -92,7 +92,8 @@ const Hero = () => {
                     href={href}
                     className="p-3 rounded-xl glass-effect hover:bg-white/20 dark:hover:bg-dark-800/20 transition-all duration-300 hover:scale-110"
                         aria-label={label}
-                        target='_blank'
+                    target='_blank'
+                     rel="noopener noreferrer"
                   >
                     <Icon className="w-5 h-5" />
                   </a>
@@ -121,8 +122,9 @@ const Hero = () => {
         <div className="relative w-full h-full rounded-full overflow-hidden border-4 border-white/30 dark:border-dark-700/30 shadow-2xl">
           <img 
             src={heroImage} 
-            alt="Profile Picture" 
-            className="w-full h-full object-cover object-center"
+            alt="Profile" 
+                        className="w-full h-full object-cover object-center"
+                        
           />
         </div>
         
