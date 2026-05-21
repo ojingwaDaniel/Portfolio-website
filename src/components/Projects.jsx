@@ -200,10 +200,10 @@ const Projects = () => {
                 <div className="absolute top-4 left-4">
                   <span className={`px-3 py-1 rounded-full text-xs font-medium backdrop-blur-sm ${
                     project.category === 'it-support' 
-                      ? 'bg-blue-500/20 text-blue-600 dark:text-blue-400'
+                      ? 'bg-black text-blue-600 dark:text-blue-400'
                       : project.category === 'fullstack'
-                      ? 'bg-purple-500/20 text-purple-600 dark:text-purple-400'
-                      : 'bg-green-500/20 text-green-600 dark:text-green-400'
+                      ? 'bg-black text-purple-600 dark:text-white'
+                      : 'bg-black text-green-600 dark:text-green-400'
                   }`}>
                     {project.category === 'it-support' ? 'IT Support' : 
                      project.category === 'fullstack' ? 'Full Stack' : 'Frontend'}
