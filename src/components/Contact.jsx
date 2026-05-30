@@ -18,7 +18,7 @@ const Contact = () => {
   const [notification, setNotification] = useState(null);
 
   // EmailJS Configuration - Updated with working test credentials
-  const EMAILJS_SERVICE_ID = 'service_x8eawe8';
+  const EMAILJS_SERVICE_ID = 'service_2t4kir2';
   const EMAILJS_TEMPLATE_ID = 'template_ct0jhlb';
   const EMAILJS_PUBLIC_KEY = 'T7bVF96pXUjnps1Eo';
 
