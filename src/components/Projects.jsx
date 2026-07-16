@@ -334,7 +334,7 @@ const Projects = () => {
               <ExternalLink className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </a>
             <a
-              href="/Ojingwa_Daniel_Resume.docx"
+              href="/Ojingwa_Daniel_Nmesoma_CV.docx"
               className="inline-flex items-center px-8 py-4 rounded-full glass-effect hover:bg-white/20 dark:hover:bg-dark-800/20 transition-all duration-300 group"
               rel="noopener noreferrer"
             >

@@ -359,7 +359,7 @@ const Contact = () => {
             viewport={{ once: true }}
             className="space-y-8"
           >
-            {/* Contact Cards - FIXED CLICKABLE LINKS */}
+            
             <div className="space-y-6">
               {contactInfo.map((info, index) => (
                 info.clickable ? (
@@ -374,7 +374,7 @@ const Contact = () => {
                     viewport={{ once: true }}
                     className="flex items-center p-6 rounded-2xl glass-effect card-hover group cursor-pointer"
                     onClick={(e) => {
-                      // Special handling for mailto links
+                   
                       if (info.href.startsWith('mailto:')) {
                         window.location.href = info.href;
                         e.preventDefault();
@@ -431,7 +431,7 @@ const Contact = () => {
               </div>
             </div>
             
-            {/* Availability Status */}
+        
             <div className="p-8 rounded-3xl bg-gradient-to-br from-primary-500/10 to-purple-600/10 border border-primary-500/20">
               <div className="flex items-center mb-4">
                 <div className="relative">
@@ -459,7 +459,7 @@ const Contact = () => {
               </div>
             </div>
             
-            {/* Direct Email CTA - FIXED LINK */}
+          
             <div className="p-8 rounded-3xl bg-gradient-to-br from-blue-500/10 to-cyan-600/10 border border-blue-500/20">
               <h4 className="text-xl font-bold mb-4 flex items-center">
                 <Mail className="w-5 h-5 mr-2 text-blue-500" />
