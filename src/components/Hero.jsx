@@ -114,7 +114,7 @@ const Hero = () => {
             transition={{ duration: 0.8, delay: 0.2 }}
             className="relative"
           >
-            <div className="relative bg-white/80 dark:bg-gray-900/80 rounded-3xl p-8 shadow-2xl backdrop-blur-sm border border-gray-200/50 dark:border-gray-700/50">
+            <div className="relative bg-white/80 dark:bg-black rounded-3xl p-8 shadow-2xl backdrop-blur-sm border border-gray-200/50 dark:border-gray-700/50">
               {/* Profile Section */}
               <div className="relative mb-8">
                 <div className="flex flex-col items-center">
