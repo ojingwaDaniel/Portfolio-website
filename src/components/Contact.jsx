@@ -51,12 +51,7 @@ const Contact = () => {
     }
 
     try {
-      const result = await emailjs.sendForm(
-        EMAILJS_SERVICE_ID,
-        EMAILJS_TEMPLATE_ID,
-        formRef.current,
-        EMAILJS_PUBLIC_KEY
-      );
+      
 
       showNotification('success', 'Message sent successfully! I\'ll get back to you within 24 hours.');
       setIsSubmitting(false);
