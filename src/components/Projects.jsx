@@ -15,7 +15,7 @@ import Invonix from "../../src/assets/dashboard.png";
 import bildup from "../../src/assets/bildup.png";
 import care4u from "../assets/care-4-U.png";
 import gracieesFoodstuff from "../assets/graciees-foodstuff.png";
-import jobBoard from"../assets/job-board.png"
+import jobBoard from "../assets/job-board.png";
 import itSupport1 from "../assets/it-support-1.jpeg";
 import itSupport2 from "../assets/it-support-2.jpeg";
 import itSupport3 from "../assets/it-support-3.jpeg";
@@ -42,7 +42,7 @@ const Projects = () => {
       title: "Job Board",
       description:
         "A modern job board platform that enables employers to post job listings, manage applications, and connect with qualified candidates through an intuitive and responsive interface.",
-      tags: ["Blade", "Laravel", "Mysql",],
+      tags: ["Blade", "Laravel", "Mysql"],
       image: jobBoard,
       category: "fullstack",
       github: "https://github.com/ojingwaDaniel/Job-Board",
@@ -141,7 +141,7 @@ const Projects = () => {
       : projects.filter((project) => project.category === activeFilter);
 
   return (
-    <section id="projects" className="py-20 relative">
+    <section id="projects" className="py-20 relative bg-white dark:bg-black">
       <div className="container mx-auto px-6">
         {/* Section Header */}
         <motion.div
@@ -151,15 +151,15 @@ const Projects = () => {
           viewport={{ once: true }}
           className="text-center mb-12"
         >
-          <span className="inline-block px-4 py-2 rounded-full bg-primary-500/10 dark:bg-primary-500/20 mb-4">
-            <span className="gradient-text font-semibold">
+          <span className="inline-block px-4 py-2 rounded-full border border-gray-300 dark:border-gray-700 mb-4">
+            <span className="text-black dark:text-white font-semibold font-body">
               PORTFOLIO SHOWCASE
             </span>
           </span>
-          <h2 className="text-4xl md:text-5xl font-bold mb-6">
-            Featured <span className="gradient-text">Work</span>
+          <h2 className="text-4xl md:text-5xl font-heading font-bold text-black dark:text-white mb-6">
+            Featured <span className="text-gray-600 dark:text-gray-400">Work</span>
           </h2>
-          <p className="text-xl text-dark-600 dark:text-dark-300 max-w-2xl mx-auto">
+          <p className="text-xl text-gray-600 dark:text-gray-300 font-body max-w-2xl mx-auto">
             Showcasing both development projects and hands-on IT support
             experience
           </p>
@@ -177,15 +177,17 @@ const Projects = () => {
             <button
               key={id}
               onClick={() => setActiveFilter(id)}
-              className={`group inline-flex items-center px-6 py-3 rounded-full font-medium transition-all duration-300 ${
+              className={`group inline-flex items-center px-6 py-3 rounded-full font-body font-medium transition-all duration-300 ${
                 activeFilter === id
-                  ? "bg-gradient-to-r from-primary-500 to-purple-600 text-white shadow-lg shadow-primary-500/25"
-                  : "glass-effect hover:bg-white/20 dark:hover:bg-dark-800/20"
+                  ? "bg-black dark:bg-white text-white dark:text-black shadow-lg"
+                  : "border border-gray-300 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-gray-800 dark:text-white"
               }`}
             >
               <Icon
                 className={`w-4 h-4 mr-2 transition-transform group-hover:rotate-12 ${
-                  activeFilter === id ? "text-white" : "text-primary-500"
+                  activeFilter === id
+                    ? "text-white dark:text-black"
+                    : "text-gray-600 dark:text-gray-400"
                 }`}
               />
               {label}
@@ -202,37 +204,24 @@ const Projects = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
               viewport={{ once: true, margin: "-50px" }}
-              className={`group relative rounded-2xl overflow-hidden card-hover ${
-                project.featured ? "lg:col-span-2 lg:row-span-2" : ""
-              }`}
+              className="group relative rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 h-[480px] flex flex-col"
             >
               {/* Project Image */}
-              <div className="relative h-64 overflow-hidden">
+              <div className="relative h-48 flex-shrink-0 overflow-hidden">
                 <div
                   className="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-110"
                   style={{ backgroundImage: `url(${project.image})` }}
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-dark-900/90 via-dark-900/50 to-transparent" />
-
-                {/* Overlay */}
-                <div className="absolute inset-0 bg-gradient-to-t from-primary-900/80 via-primary-900/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent" />
 
                 {/* Category Badge */}
                 <div className="absolute top-4 left-4">
-                  <span
-                    className={`px-3 py-1 rounded-full text-xs font-medium backdrop-blur-sm ${
-                      project.category === "it-support"
-                        ? "bg-black text-blue-600 dark:text-blue-400"
-                        : project.category === "fullstack"
-                          ? "bg-black text-purple-600 dark:text-white"
-                          : "bg-black text-green-600 dark:text-green-400"
-                    }`}
-                  >
+                  <span className="px-3 py-1 rounded-full bg-black/70 backdrop-blur-sm text-white text-xs font-body font-medium border border-white/20">
                     {project.category === "it-support"
                       ? "IT Support"
                       : project.category === "fullstack"
-                        ? "Full Stack"
-                        : "Frontend"}
+                      ? "Full Stack"
+                      : "Frontend"}
                   </span>
                 </div>
 
@@ -241,7 +230,7 @@ const Projects = () => {
                   {project.tags.slice(0, 3).map((tag) => (
                     <span
                       key={tag}
-                      className="px-3 py-1 rounded-full glass-effect text-xs font-medium backdrop-blur-sm"
+                      className="px-3 py-1 rounded-full bg-black/50 backdrop-blur-sm text-white text-xs font-body border border-white/10"
                     >
                       {tag}
                     </span>
@@ -255,10 +244,10 @@ const Projects = () => {
                       href={project.github}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="p-2 rounded-lg glass-effect hover:bg-white/20 transition-colors"
+                      className="p-2 rounded-lg bg-black/60 backdrop-blur-sm hover:bg-black/80 transition-colors border border-white/20"
                       aria-label="View code"
                     >
-                      <Github className="w-5 h-5" />
+                      <Github className="w-5 h-5 text-white" />
                     </a>
                   )}
                   {project.live && project.live !== "#" && (
@@ -266,80 +255,64 @@ const Projects = () => {
                       href={project.live}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="p-2 rounded-lg glass-effect hover:bg-white/20 transition-colors"
+                      className="p-2 rounded-lg bg-black/60 backdrop-blur-sm hover:bg-black/80 transition-colors border border-white/20"
                       aria-label="View live demo"
                     >
-                      <ExternalLink className="w-5 h-5" />
+                      <ExternalLink className="w-5 h-5 text-white" />
                     </a>
                   )}
                 </div>
               </div>
 
               {/* Content */}
-              <div className="relative p-6 glass-effect">
-                <h3 className="text-xl font-bold mb-3 group-hover:text-primary-500 transition-colors">
-                  {project.title}
-                </h3>
-                <p className="text-dark-600 dark:text-dark-300 mb-4">
-                  {project.description}
-                </p>
-
-                {/* Tech Stack */}
-                <div className="flex flex-wrap gap-2 mb-6">
-                  {project.tags.map((tag) => (
-                    <span
-                      key={tag}
-                      className="px-3 py-1 rounded-full bg-primary-500/10 dark:bg-primary-500/20 text-xs font-medium"
-                    >
-                      {tag}
-                    </span>
-                  ))}
+              <div className="flex-1 flex flex-col justify-between p-6 bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-700 border-t-0 rounded-b-2xl">
+                <div>
+                  <h3 className="text-xl font-heading font-bold text-black dark:text-white mb-2 group-hover:text-gray-600 dark:group-hover:text-gray-400 transition-colors">
+                    {project.title}
+                  </h3>
+                  <p className="text-gray-600 dark:text-gray-300 font-body text-sm line-clamp-3">
+                    {project.description}
+                  </p>
                 </div>
 
-                {/* IT Support Services List */}
-                {project.category === "it-support" && project.services && (
-                  <div className="mb-6">
-                    <h4 className="text-sm font-semibold text-dark-700 dark:text-dark-300 mb-2">
-                      Services Provided:
-                    </h4>
-                    <ul className="space-y-1">
-                      {project.services.slice(0, 3).map((service, idx) => (
-                        <li
-                          key={idx}
-                          className="flex items-center text-sm text-dark-600 dark:text-dark-400"
-                        >
-                          <div className="w-1.5 h-1.5 bg-primary-500 rounded-full mr-2" />
-                          {service}
-                        </li>
-                      ))}
-                    </ul>
+                <div>
+                  {/* Tech Stack */}
+                  <div className="flex flex-wrap gap-2 my-4">
+                    {project.tags.map((tag) => (
+                      <span
+                        key={tag}
+                        className="px-3 py-1 rounded-full bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 text-xs font-body font-medium"
+                      >
+                        {tag}
+                      </span>
+                    ))}
                   </div>
-                )}
 
-                {/* View Project Button */}
-                <div className="flex items-center justify-between">
-                  {project.live && project.live !== "#" ? (
-                    <a
-                      href={project.live}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="inline-flex items-center text-primary-500 font-medium hover:text-primary-600 transition-colors group/link"
-                    >
-                      View Project
-                      <Eye className="ml-2 w-4 h-4 group-hover/link:translate-x-1 transition-transform" />
-                    </a>
-                  ) : project.category === "it-support" ? (
-                    <span className="inline-flex items-center text-blue-500 font-medium">
-                      <Settings className="w-4 h-4 mr-2" />
-                      IT Support Service
-                    </span>
-                  ) : null}
+                  {/* View Project / IT Support indicator */}
+                  <div className="flex items-center justify-between">
+                    {project.live && project.live !== "#" ? (
+                      <a
+                        href={project.live}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center text-black dark:text-white font-body font-medium hover:text-gray-600 dark:hover:text-gray-400 transition-colors group/link text-sm"
+                      >
+                        View Project
+                        <Eye className="ml-2 w-4 h-4 group-hover/link:translate-x-1 transition-transform" />
+                      </a>
+                    ) : project.category === "it-support" ? (
+                      <span className="inline-flex items-center text-gray-600 dark:text-gray-400 font-body font-medium text-sm">
+                        <Settings className="w-4 h-4 mr-2" />
+                        IT Support Service
+                      </span>
+                    ) : null}
 
-                  {project.featured && (
-                    <span className="px-3 py-1 rounded-full bg-gradient-to-r from-yellow-500/20 to-orange-500/20 text-yellow-600 dark:text-yellow-400 text-xs font-medium">
-                      Featured
-                    </span>
-                  )}
+                    {project.featured && (
+                      <span className="px-3 py-1 rounded-full bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-300 text-xs font-body font-medium">
+                        Featured
+                      </span>
+                    )}
+                  </div>
                 </div>
               </div>
             </motion.div>
@@ -357,14 +330,14 @@ const Projects = () => {
           <div className="inline-flex flex-col sm:flex-row gap-4">
             <a
               href="#contact"
-              className="inline-flex items-center px-8 py-4 rounded-full bg-gradient-to-r from-primary-500 to-purple-600 text-white font-semibold hover:shadow-xl hover:shadow-primary-500/25 transition-all duration-300 group"
+              className="inline-flex items-center px-8 py-4 rounded-full bg-black dark:bg-white text-white dark:text-black font-semibold font-body hover:bg-gray-800 dark:hover:bg-gray-200 shadow-lg hover:shadow-xl transition-all duration-300 group"
             >
               <span className="mr-3">Discuss Your Project</span>
               <ExternalLink className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </a>
             <a
               href="/Ojingwa_Daniel_Nmesoma_CV.docx"
-              className="inline-flex items-center px-8 py-4 rounded-full glass-effect hover:bg-white/20 dark:hover:bg-dark-800/20 transition-all duration-300 group"
+              className="inline-flex items-center px-8 py-4 rounded-full border border-gray-300 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-gray-800 transition-all duration-300 group font-body font-medium text-gray-700 dark:text-gray-300"
               rel="noopener noreferrer"
             >
               <span className="mr-3">Download Resume</span>

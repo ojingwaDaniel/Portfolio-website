@@ -11,18 +11,15 @@ import {
   Gem,
   FileCode,
   Sparkles,
-  
 } from 'lucide-react';
-
-
 
 const Skills = () => {
   const floatingIcons = [
-    { Icon: Code2, delay: 0, color: 'text-blue-500', left: '5%', top: '20%' },
-    { Icon: Server, delay: 0.4, color: 'text-green-500', left: '90%', top: '30%' },
-    { Icon: Database, delay: 0.8, color: 'text-purple-500', left: '10%', top: '75%' },
-    { Icon: Cpu, delay: 1.2, color: 'text-yellow-500', left: '85%', top: '70%' },
-    { Icon: Smartphone, delay: 1.6, color: 'text-red-500', left: '50%', top: '90%' },
+    { Icon: Code2, delay: 0, color: 'text-gray-400 dark:text-gray-600', left: '5%', top: '20%' },
+    { Icon: Server, delay: 0.4, color: 'text-gray-400 dark:text-gray-600', left: '90%', top: '30%' },
+    { Icon: Database, delay: 0.8, color: 'text-gray-400 dark:text-gray-600', left: '10%', top: '75%' },
+    { Icon: Cpu, delay: 1.2, color: 'text-gray-400 dark:text-gray-600', left: '85%', top: '70%' },
+    { Icon: Smartphone, delay: 1.6, color: 'text-gray-400 dark:text-gray-600', left: '50%', top: '90%' },
   ];
 
   const skillCategories = [
@@ -30,30 +27,30 @@ const Skills = () => {
       name: "Frontend Development",
       icon: Layout,
       skills: [
-        { name: "HTML5 & CSS3", level: 95, icon: FileCode, color: "from-orange-500 to-red-500" },
-        { name: "JavaScript (ES6+)", level: 90, icon: Braces, color: "from-yellow-500 to-amber-500" },
-        { name: "React JS", level: 92, icon: Code2, color: "from-cyan-500 to-blue-500" },
-        { name: "Tailwind CSS", level: 88, icon: Layout, color: "from-teal-500 to-emerald-500" },
+        { name: "HTML5 & CSS3", level: 95, icon: FileCode },
+        { name: "JavaScript (ES6+)", level: 90, icon: Braces },
+        { name: "React JS", level: 92, icon: Code2 },
+        { name: "Tailwind CSS", level: 88, icon: Layout },
       ]
     },
     {
       name: "Backend Development",
       icon: Server,
       skills: [
-        { name: "PHP", level: 90, icon: Braces, color: "from-indigo-500 to-purple-500" },
-        { name: "Laravel", level: 92, icon: Gem, color: "from-red-500 to-rose-500" },
-        { name: "Node.js", level: 85, icon: Server, color: "from-green-500 to-emerald-500" },
-        { name: "RESTful APIs", level: 88, icon: Code2, color: "from-blue-500 to-sky-500" },
+        { name: "PHP", level: 90, icon: Braces },
+        { name: "Laravel", level: 92, icon: Gem },
+        { name: "Node.js", level: 85, icon: Server },
+        { name: "RESTful APIs", level: 88, icon: Code2 },
       ]
     },
     {
       name: "Mobile & Database",
       icon: Smartphone,
       skills: [
-        { name: "React Native", level: 87, icon: Smartphone, color: "from-blue-500 to-indigo-500" },
-        { name: "Database Design", level: 85, icon: Database, color: "from-purple-500 to-pink-500" },
-        { name: "MySQL/PostgreSQL", level: 88, icon: Database, color: "from-cyan-500 to-blue-500" },
-        { name: "MongoDB", level: 80, icon: Database, color: "from-green-500 to-teal-500" },
+        { name: "React Native", level: 87, icon: Smartphone },
+        { name: "Database Design", level: 85, icon: Database },
+        { name: "MySQL/PostgreSQL", level: 88, icon: Database },
+        { name: "MongoDB", level: 80, icon: Database },
       ]
     }
   ];
@@ -75,7 +72,7 @@ const Skills = () => {
   };
 
   return (
-    <section id="skills" className="relative overflow-hidden py-20 md:py-28">
+    <section id="skills" className="relative overflow-hidden py-20 md:py-28 bg-white dark:bg-black">
       {/* Animated Background Elements */}
       <div className="absolute inset-0 z-0">
         {floatingIcons.map(({ Icon, delay, color, left, top }, index) => (
@@ -109,14 +106,14 @@ const Skills = () => {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <div className="inline-flex items-center px-4 py-2 rounded-full bg-primary-500/10 dark:bg-primary-500/20 mb-4">
-            <span className="w-2 h-2 bg-primary-500 rounded-full mr-2 animate-pulse" />
-            <span className="text-sm font-semibold gradient-text">What I Bring To The Table</span>
+          <div className="inline-flex items-center px-4 py-2 rounded-full border border-gray-300 dark:border-gray-700 mb-4">
+            <span className="w-2 h-2 bg-black dark:bg-white rounded-full mr-2 animate-pulse" />
+            <span className="text-sm font-semibold text-black dark:text-white">What I Bring To The Table</span>
           </div>
-          <h2 className="text-4xl md:text-5xl font-bold mb-4">
-            Technical <span className="gradient-text">Expertise</span>
+          <h2 className="text-4xl md:text-5xl font-heading font-bold text-black dark:text-white mb-4">
+            Technical <span className="text-gray-600 dark:text-gray-400">Expertise</span>
           </h2>
-          <p className="text-dark-600 dark:text-dark-300 max-w-2xl mx-auto text-lg">
+          <p className="text-gray-600 dark:text-gray-300 max-w-2xl mx-auto text-lg font-body">
             Specialized in modern frameworks and best practices
           </p>
         </motion.div>
@@ -132,11 +129,11 @@ const Skills = () => {
           {skillCategories.map((category, catIndex) => (
             <motion.div key={catIndex} variants={itemVariants}>
               <div className="flex items-center gap-3 mb-6">
-                <div className="p-2 rounded-xl bg-gradient-to-br from-primary-500/20 to-purple-500/20">
-                  <category.icon className="w-6 h-6 text-primary-500" />
+                <div className="p-2 rounded-xl bg-gray-200 dark:bg-gray-700">
+                  <category.icon className="w-6 h-6 text-black dark:text-white" />
                 </div>
-                <h3 className="text-2xl font-bold">{category.name}</h3>
-                <div className="flex-1 h-px bg-gradient-to-r from-primary-500/50 to-transparent" />
+                <h3 className="text-2xl font-heading font-bold text-black dark:text-white">{category.name}</h3>
+                <div className="flex-1 h-px bg-gray-300 dark:bg-gray-700" />
               </div>
               
               <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
@@ -145,24 +142,24 @@ const Skills = () => {
                     key={skill.name}
                     variants={itemVariants}
                     whileHover={{ scale: 1.03, y: -5 }}
-                    className="glass-effect rounded-2xl p-5 backdrop-blur-xl border border-white/20 dark:border-dark-700/20 group cursor-default"
+                    className="bg-white/80 dark:bg-gray-900/80 rounded-2xl p-5 backdrop-blur-sm border border-gray-200/50 dark:border-gray-700/50 shadow-lg group cursor-default"
                   >
                     <div className="flex items-start justify-between mb-4">
-                      <div className={`p-3 rounded-xl bg-gradient-to-br ${skill.color} bg-opacity-20 shadow-lg`}>
-                        <skill.icon className="w-6 h-6 text-white" />
+                      <div className="p-3 rounded-xl bg-gray-200 dark:bg-gray-700">
+                        <skill.icon className="w-6 h-6 text-black dark:text-white" />
                       </div>
-                      <span className="text-sm font-semibold gradient-text">
+                      <span className="text-sm font-heading font-bold text-black dark:text-white">
                         {skill.level}%
                       </span>
                     </div>
-                    <h4 className="text-lg font-bold mb-3">{skill.name}</h4>
-                    <div className="w-full h-2 bg-dark-200 dark:bg-dark-700 rounded-full overflow-hidden">
+                    <h4 className="text-lg font-heading font-bold text-black dark:text-white mb-3">{skill.name}</h4>
+                    <div className="w-full h-2 bg-gray-200 dark:bg-gray-700 rounded-full overflow-hidden">
                       <motion.div
                         initial={{ width: 0 }}
                         whileInView={{ width: `${skill.level}%` }}
                         viewport={{ once: true }}
                         transition={{ duration: 0.8, delay: 0.2 }}
-                        className={`h-full rounded-full bg-gradient-to-r ${skill.color}`}
+                        className="h-full rounded-full bg-black dark:bg-white"
                       />
                     </div>
                   </motion.div>
@@ -180,11 +177,11 @@ const Skills = () => {
           transition={{ duration: 0.6, delay: 0.4 }}
           className="mt-16"
         >
-          <div className="glass-effect rounded-3xl p-8 backdrop-blur-xl border border-white/20 dark:border-dark-700/20">
-            <h3 className="text-xl font-bold text-center mb-8 flex items-center justify-center gap-2">
-              <Sparkles className="w-5 h-5 text-primary-500" />
+          <div className="bg-white/80 dark:bg-gray-900/80 rounded-3xl p-8 backdrop-blur-sm border border-gray-200/50 dark:border-gray-700/50 shadow-xl">
+            <h3 className="text-xl font-heading font-bold text-black dark:text-white text-center mb-8 flex items-center justify-center gap-2">
+              <Sparkles className="w-5 h-5 text-gray-600 dark:text-gray-400" />
               Other Technologies I Work With
-              <Sparkles className="w-5 h-5 text-primary-500" />
+              <Sparkles className="w-5 h-5 text-gray-600 dark:text-gray-400" />
             </h3>
             <div className="flex flex-wrap justify-center gap-3">
               {[
@@ -193,7 +190,7 @@ const Skills = () => {
               ].map((tool) => (
                 <span
                   key={tool}
-                  className="px-4 py-2 rounded-full bg-white/10 dark:bg-dark-800/30 backdrop-blur-sm text-sm font-medium hover:bg-primary-500/20 hover:scale-105 transition-all duration-300 cursor-default"
+                  className="px-4 py-2 rounded-full border border-gray-200 dark:border-gray-700 text-sm font-medium hover:bg-gray-100 dark:hover:bg-gray-800 transition-all duration-300 cursor-default text-gray-700 dark:text-gray-300 font-body"
                 >
                   {tool}
                 </span>
@@ -205,6 +202,5 @@ const Skills = () => {
     </section>
   );
 };
-
 
 export default Skills;

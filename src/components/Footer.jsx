@@ -7,16 +7,15 @@ const Footer = () => {
   };
 
   return (
-    <footer className="relative py-12">
-      {/* Gradient Background */}
-      <div className="absolute inset-0 bg-gradient-to-b from-transparent to-primary-500/5" />
-      
+    <footer className="relative py-12 bg-white dark:bg-black border-t border-gray-200 dark:border-gray-800">
       <div className="container mx-auto px-6 relative">
         <div className="flex flex-col md:flex-row justify-between items-center mb-8">
           {/* Logo */}
           <a href="#home" className="flex items-center space-x-2 mb-6 md:mb-0 group">
-            <Code2 className="w-8 h-8 text-primary-500 group-hover:rotate-12 transition-transform" />
-            <span className="text-2xl font-bold gradient-text">DevPortfolio</span>
+            <Code2 className="w-8 h-8 text-black dark:text-white group-hover:rotate-12 transition-transform" />
+            <span className="text-2xl font-heading font-bold text-black dark:text-white">
+              DevPortfolio
+            </span>
           </a>
           
           {/* Quick Links */}
@@ -25,7 +24,7 @@ const Footer = () => {
               <a
                 key={item}
                 href={`#${item.toLowerCase()}`}
-                className="text-dark-700 dark:text-dark-300 hover:text-primary-500 dark:hover:text-primary-400 transition-colors font-medium"
+                className="text-gray-600 dark:text-gray-400 hover:text-black dark:hover:text-white transition-colors font-body font-medium"
               >
                 {item}
               </a>
@@ -35,25 +34,25 @@ const Footer = () => {
           {/* Back to Top */}
           <button
             onClick={scrollToTop}
-            className="p-3 rounded-full glass-effect hover:bg-white/20 dark:hover:bg-dark-800/20 transition-all duration-300 hover:scale-110"
+            className="p-3 rounded-full border border-gray-300 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-gray-800 transition-all duration-300 hover:scale-110"
             aria-label="Back to top"
           >
-            <ArrowUp className="w-5 h-5" />
+            <ArrowUp className="w-5 h-5 text-black dark:text-white" />
           </button>
         </div>
         
         {/* Divider */}
-        <div className="w-full h-px bg-gradient-to-r from-transparent via-primary-500/50 to-transparent my-8" />
+        <div className="w-full h-px bg-gray-200 dark:bg-gray-700 my-8" />
         
         {/* Bottom Section */}
         <div className="flex flex-col md:flex-row justify-between items-center">
-          <p className="text-dark-600 dark:text-dark-300 text-center md:text-left mb-4 md:mb-0">
+          <p className="text-gray-600 dark:text-gray-400 font-body text-center md:text-left mb-4 md:mb-0">
             © {new Date().getFullYear()} DevPortfolio. All rights reserved.
           </p>
           
-          <div className="flex items-center text-dark-600 dark:text-dark-300">
+          <div className="flex items-center text-gray-600 dark:text-gray-400 font-body">
             Made with
-            <Heart className="w-4 h-4 mx-2 text-red-500 fill-red-500 animate-pulse" />
+            <Heart className="w-4 h-4 mx-2 text-gray-400 dark:text-gray-500" />
             by Ojingwa Daniel
           </div>
         </div>

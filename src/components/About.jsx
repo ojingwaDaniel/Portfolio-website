@@ -11,13 +11,14 @@ import {
   Zap,
   Star
 } from 'lucide-react';
+
 const About = () => {
   const floatingIcons = [
-    { Icon: Award, delay: 0, color: 'text-yellow-500', left: '10%', top: '15%' },
-    { Icon: Users, delay: 0.3, color: 'text-blue-500', left: '85%', top: '20%' },
-    { Icon: Coffee, delay: 0.6, color: 'text-orange-500', left: '15%', top: '70%' },
-    { Icon: Laptop, delay: 0.9, color: 'text-purple-500', left: '75%', top: '80%' },
-    { Icon: Sparkles, delay: 1.2, color: 'text-green-500', left: '50%', top: '10%' },
+    { Icon: Award, delay: 0, color: 'text-gray-400 dark:text-gray-600', left: '10%', top: '15%' },
+    { Icon: Users, delay: 0.3, color: 'text-gray-400 dark:text-gray-600', left: '85%', top: '20%' },
+    { Icon: Coffee, delay: 0.6, color: 'text-gray-400 dark:text-gray-600', left: '15%', top: '70%' },
+    { Icon: Laptop, delay: 0.9, color: 'text-gray-400 dark:text-gray-600', left: '75%', top: '80%' },
+    { Icon: Sparkles, delay: 1.2, color: 'text-gray-400 dark:text-gray-600', left: '50%', top: '10%' },
   ];
 
   const stats = [
@@ -35,7 +36,7 @@ const About = () => {
   ];
 
   return (
-    <section id="about" className="relative overflow-hidden py-20 md:py-28">
+    <section id="about" className="relative overflow-hidden py-20 md:py-28 bg-white dark:bg-black">
       {/* Animated Background Elements */}
       <div className="absolute inset-0 z-0">
         {floatingIcons.map(({ Icon, delay, color, left, top }, index) => (
@@ -68,14 +69,14 @@ const About = () => {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <div className="inline-flex items-center px-4 py-2 rounded-full bg-primary-500/10 dark:bg-primary-500/20 mb-4">
-            <span className="w-2 h-2 bg-primary-500 rounded-full mr-2 animate-pulse" />
-            <span className="text-sm font-semibold gradient-text">Get To Know Me</span>
+          <div className="inline-flex items-center px-4 py-2 rounded-full border border-gray-300 dark:border-gray-700 mb-4">
+            <span className="w-2 h-2 bg-black dark:bg-white rounded-full mr-2 animate-pulse" />
+            <span className="text-sm font-semibold text-black dark:text-white">Get To Know Me</span>
           </div>
-          <h2 className="text-4xl md:text-5xl font-bold mb-4">
-            About <span className="gradient-text">Me</span>
+          <h2 className="text-4xl md:text-5xl font-heading font-bold text-black dark:text-white mb-4">
+            About <span className="text-gray-600 dark:text-gray-400">Me</span>
           </h2>
-          <p className="text-dark-600 dark:text-dark-300 max-w-2xl mx-auto text-lg">
+          <p className="text-gray-600 dark:text-gray-300 max-w-2xl mx-auto text-lg font-body">
             Passionate developer dedicated to crafting exceptional digital experiences
           </p>
         </motion.div>
@@ -88,18 +89,18 @@ const About = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.2 }}
           >
-            <div className="glass-effect rounded-3xl p-8 md:p-10 backdrop-blur-xl border border-white/20 dark:border-dark-700/20">
-              <h3 className="text-2xl font-bold mb-4 flex items-center gap-2">
-                <span className="gradient-text">Ojingwa Daniel Nmesoma</span>
+            <div className="bg-white/80 dark:bg-gray-900/80 rounded-3xl p-8 md:p-10 backdrop-blur-sm border border-gray-200/50 dark:border-gray-700/50 shadow-xl">
+              <h3 className="text-2xl font-heading font-bold mb-4 flex items-center gap-2">
+                <span className="text-black dark:text-white">Ojingwa Daniel Nmesoma</span>
                 <span className="text-xs bg-green-500/20 text-green-500 px-2 py-1 rounded-full">Available</span>
               </h3>
-              <p className="text-dark-600 dark:text-dark-300 leading-relaxed mb-6">
+              <p className="text-gray-600 dark:text-gray-300 leading-relaxed mb-6 font-body">
                 I'm a Full-Stack Developer and IT Specialist with over 5 years of experience 
                 building high-performance web and mobile applications. My journey in tech started 
                 with a curiosity for how things work, which evolved into a passion for creating 
                 elegant solutions to complex problems.
               </p>
-              <p className="text-dark-600 dark:text-dark-300 leading-relaxed mb-8">
+              <p className="text-gray-600 dark:text-gray-300 leading-relaxed mb-8 font-body">
                 I specialize in the Laravel ecosystem for robust backends and React for dynamic 
                 frontends. I believe in writing clean, maintainable code and continuously learning 
                 new technologies to stay at the forefront of web development.
@@ -115,17 +116,17 @@ const About = () => {
                     transition={{ delay: 0.3 + index * 0.1 }}
                     className="flex items-center gap-3"
                   >
-                    <div className="w-8 h-8 rounded-full bg-primary-500/20 flex items-center justify-center">
-                      <CheckCircle2 className="w-4 h-4 text-primary-500" />
+                    <div className="w-8 h-8 rounded-full bg-gray-200 dark:bg-gray-700 flex items-center justify-center">
+                      <CheckCircle2 className="w-4 h-4 text-black dark:text-white" />
                     </div>
-                    <span className="text-dark-700 dark:text-dark-200">{highlight}</span>
+                    <span className="text-gray-700 dark:text-gray-200 font-body">{highlight}</span>
                   </motion.div>
                 ))}
               </div>
 
               <a
                 href="#contact"
-                className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-primary-500 to-purple-600 text-white rounded-full font-semibold hover:shadow-xl hover:shadow-primary-500/30 transition-all duration-300 group"
+                className="inline-flex items-center gap-2 px-6 py-3 bg-black dark:bg-white text-white dark:text-black rounded-full font-semibold hover:bg-gray-800 dark:hover:bg-gray-200 transition-all duration-300 group"
               >
                 Let's Connect
                 <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
@@ -147,28 +148,28 @@ const About = () => {
                 <motion.div
                   key={index}
                   whileHover={{ scale: 1.05, y: -5 }}
-                  className="glass-effect rounded-2xl p-6 text-center backdrop-blur-xl border border-white/20 dark:border-dark-700/20"
+                  className="bg-white/80 dark:bg-gray-900/80 rounded-2xl p-6 text-center backdrop-blur-sm border border-gray-200/50 dark:border-gray-700/50 shadow-lg"
                 >
-                  <stat.icon className="w-8 h-8 text-primary-500 mx-auto mb-3" />
-                  <div className="text-3xl font-bold gradient-text">{stat.value}</div>
-                  <div className="text-sm text-dark-600 dark:text-dark-300">{stat.label}</div>
+                  <stat.icon className="w-8 h-8 text-black dark:text-white mx-auto mb-3" />
+                  <div className="text-3xl font-heading font-bold text-black dark:text-white">{stat.value}</div>
+                  <div className="text-sm text-gray-600 dark:text-gray-300 font-body">{stat.label}</div>
                 </motion.div>
               ))}
             </div>
 
             {/* Philosophy Card */}
-            <div className="glass-effect rounded-2xl p-6 backdrop-blur-xl border border-white/20 dark:border-dark-700/20">
-              <h4 className="text-xl font-bold mb-3 flex items-center gap-2">
-                <Sparkles className="w-5 h-5 text-primary-500" />
+            <div className="bg-white/80 dark:bg-gray-900/80 rounded-2xl p-6 backdrop-blur-sm border border-gray-200/50 dark:border-gray-700/50 shadow-lg">
+              <h4 className="text-xl font-heading font-bold mb-3 flex items-center gap-2 text-black dark:text-white">
+                <Sparkles className="w-5 h-5 text-gray-600 dark:text-gray-400" />
                 My Philosophy
               </h4>
-              <p className="text-dark-600 dark:text-dark-300">
+              <p className="text-gray-600 dark:text-gray-300 font-body">
                 "Code is poetry in motion. Every line tells a story, every function solves a puzzle. 
                 I strive to write code that not only works flawlessly but also inspires those who read it."
               </p>
-              <div className="mt-4 flex items-center gap-2 text-sm text-primary-500">
-                <span className="w-8 h-px bg-gradient-to-r from-primary-500 to-transparent" />
-                <span>Write once, maintain forever</span>
+              <div className="mt-4 flex items-center gap-2 text-sm text-gray-500 dark:text-gray-400">
+                <span className="w-8 h-px bg-gray-400 dark:bg-gray-600" />
+                <span className="font-body">Write once, maintain forever</span>
               </div>
             </div>
 
@@ -177,7 +178,7 @@ const About = () => {
               {['Open Source', 'Tech Writing', 'UI/UX Design', 'AI & ML', 'Cloud Computing'].map((interest) => (
                 <span
                   key={interest}
-                  className="px-4 py-2 rounded-full bg-white/10 dark:bg-dark-800/30 backdrop-blur-sm text-sm font-medium hover:bg-primary-500/20 transition-all duration-300 cursor-default"
+                  className="px-4 py-2 rounded-full border border-gray-200 dark:border-gray-700 text-sm font-medium hover:bg-gray-100 dark:hover:bg-gray-800 transition-all duration-300 cursor-default text-gray-700 dark:text-gray-300 font-body"
                 >
                   {interest}
                 </span>
@@ -189,4 +190,5 @@ const About = () => {
     </section>
   );
 };
+
 export default About;

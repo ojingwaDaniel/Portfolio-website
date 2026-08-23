@@ -1,3 +1,6 @@
+/* index.css */
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -6,26 +9,42 @@
   html {
     scroll-behavior: smooth;
   }
-  
+
   body {
-    @apply bg-white dark:bg-dark-900 text-dark-900 dark:text-white transition-colors duration-300;
+    /* Use Poppins as primary, fallback to Karla, then system */
+    font-family: 'Poppins', 'Karla', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    @apply bg-white text-black transition-colors duration-300;
   }
+
+  /* Optional: set heading font weights */
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Karla', 'Poppins', sans-serif;
+    font-weight: 600; /* adjust as needed */
+  }
+
+  /* Prevent horizontal overflow */
   html, body {
-  overflow-x: hidden;
-  max-width: 100vw;
-}
+    overflow-x: hidden;
+    max-width: 100vw;
+  }
 }
 
 @layer components {
-  .glass-effect {
-    @apply backdrop-blur-lg bg-white/10 dark:bg-dark-900/10 border border-white/20 dark:border-dark-700/20;
-  }
-  
-  .gradient-text {
-    @apply bg-gradient-to-r from-primary-500 to-purple-600 bg-clip-text text-transparent;
-  }
-  
+  /* Remove glass-effect and gradient-text if not using – they're colorful */
+  /* Instead, create monochrome utilities */
   .card-hover {
-    @apply transition-all duration-300 hover:scale-[1.02] hover:shadow-2xl;
+    @apply transition-all duration-300 hover:scale-[1.02] hover:shadow-lg;
+  }
+
+  .border-subtle {
+    @apply border border-gray-200 dark:border-gray-800;
+  }
+
+  .bg-mono {
+    @apply bg-white dark:bg-black;
+  }
+
+  .text-mono {
+    @apply text-black dark:text-white;
   }
 }
