@@ -14,7 +14,7 @@ const Hero = () => {
   return (
     <section id="home" className="min-h-screen flex items-center relative overflow-hidden pt-20 bg-white dark:bg-black">
       {/* Animated Background Elements – monochrome */}
-      <div className="absolute inset-0 z-0 relative overflow-hidden">
+      <div className="absolute inset-0 z-0  overflow-hidden">
         {floatingIcons.map(({ Icon, delay, color }, index) => (
           <motion.div
             key={index}
