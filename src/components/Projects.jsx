@@ -12,6 +12,7 @@ import {
 } from "lucide-react";
 
 import Invonix from "../../src/assets/dashboard.png";
+import skillGraph from "../../src/assets/result-2.png"
 import bildup from "../../src/assets/bildup.png";
 import care4u from "../assets/care-4-U.png";
 import gracieesFoodstuff from "../assets/graciees-foodstuff.png";
@@ -24,109 +25,119 @@ import itSupport5 from "../assets/it-support-5.jpeg";
 
 const Projects = () => {
   const [activeFilter, setActiveFilter] = useState("all");
-
-  const projects = [
-    {
-      id: 1,
-      title: "Invoice Payment System",
-      description:
-        "An invoice management and payment platform that supports invoice generation, payment tracking, and secure online payments using Paystack, with a simple admin dashboard.",
-      tags: ["Blade", "Laravel", "Mysql", "Paystack"],
-      image: Invonix,
-      category: "fullstack",
-      github: "https://github.com/ojingwaDaniel/invoice-payment-system",
-      live: "https://invonix.bcommz.com/login",
-    },
-    {
-      id: 2,
-      title: "Job Board",
-      description:
-        "A modern job board platform that enables employers to post job listings, manage applications, and connect with qualified candidates through an intuitive and responsive interface.",
-      tags: ["Blade", "Laravel", "Mysql"],
-      image: jobBoard,
-      category: "fullstack",
-      github: "https://github.com/ojingwaDaniel/Job-Board",
-    },
-    {
-      id: 3,
-      title: "BuildUp – Digital Marketing Agency Website",
-      description:
-        "A modern marketing agency website for BuildUp, designed to showcase digital marketing services, brand strategy, and growth solutions that help businesses turn ideas from vision to viral.",
-      tags: ["React JS", "Tailwind CSS", "Hostinger"],
-      image: bildup,
-      category: "frontend",
-      github: "https://github.com/ojingwaDaniel/Bildup-Agency-website",
-      live: "https://bildup.net/",
-    },
-    {
-      id: 4,
-      title: "Care Just 4U – Healthcare Support Website",
-      description:
-        "A mobile-friendly healthcare support website designed for Care Just 4U, showcasing compassionate care services, personalized support options, and a warm, trust-focused user experience.",
-      tags: ["React js", "UI Design", "Custom Css"],
-      image: care4u,
-      category: "frontend",
-      github: "https://github.com/GhubTeam/care-just4U",
-      live: "https://care-just-4-u.netlify.app/",
-    },
-    {
-      id: 5,
-      title: "Graciee's Foodstuff Export – Full-Stack Business Website",
-      description:
-        "A full-stack web application built with Laravel and Blade for backend management and React.js for the customer-facing frontend. The platform allows administrators to add, edit, and manage food products, while customers can browse premium food items and place orders easily via WhatsApp.",
-      tags: ["Laravel", "Blade", "React JS", "MySQL", "WhatsApp Ordering"],
-      image: gracieesFoodstuff,
-      category: "fullstack",
-      github: "https://github.com/ojingwaDaniel/Graciee-s-Foodstuff-Export",
-      live: "https://graciees-foodstuff-export.netlify.app/",
-    },
-    {
-      id: 6,
-      title: "Event IT Support & Network Setup",
-      description:
-        "Provided on-site IT support and network setup for event management programs.",
-      tags: ["IT Support", "Networking", "Event Tech"],
-      image: itSupport1,
-      category: "it-support",
-      featured: true,
-    },
-    {
-      id: 7,
-      title: "Audio-Visual & System Setup",
-      description:
-        "Handled system setup and technical support for live event presentations.",
-      tags: ["AV Setup", "Technical Support", "Events"],
-      image: itSupport2,
-      category: "it-support",
-    },
-    {
-      id: 8,
-      title: "Hardware & Device Support",
-      description:
-        "Provided hardware setup and troubleshooting during event operations.",
-      tags: ["Hardware Support", "Troubleshooting", "Events"],
-      image: itSupport3,
-      category: "it-support",
-    },
-    {
-      id: 9,
-      title: "On-site Technical Assistance",
-      description:
-        "Supported event teams with real-time technical assistance and system monitoring.",
-      tags: ["On-site Support", "IT Assistance", "Events"],
-      image: itSupport4,
-      category: "it-support",
-    },
-    {
-      id: 10,
-      title: "Event Technology Management",
-      description:
-        "Managed technical systems and ensured smooth IT operations throughout events.",
-      tags: ["Event Tech", "System Management", "IT Support"],
-      image: itSupport5,
-      category: "it-support",
-    },
-  ];
+const projects = [
+  {
+    id: 1,
+    title: "Invoice Payment System",
+    description:
+      "An invoice management and payment platform that supports invoice generation, payment tracking, and secure online payments using Paystack, with a simple admin dashboard.",
+    tags: ["Blade", "Laravel", "Mysql", "Paystack"],
+    image: Invonix,
+    category: "fullstack",
+    github: "https://github.com/ojingwaDaniel/invoice-payment-system",
+    live: "https://invonix.bcommz.com/login",
+  },
+  {
+    id: 2,
+    title: "Job Board",
+    description:
+      "A modern job board platform that enables employers to post job listings, manage applications, and connect with qualified candidates through an intuitive and responsive interface.",
+    tags: ["Blade", "Laravel", "Mysql"],
+    image: jobBoard,
+    category: "fullstack",
+    github: "https://github.com/ojingwaDaniel/Job-Board",
+  },
+  {
+    id: 11,
+    title: "SkillGraph",
+    description:
+      "A recruiter tool backed by a graph database (CognoDB) that matches candidates to job openings by tracing skill relationships — surfacing people whose skills are closely related to what's required, even without an exact match.",
+    tags: ["Next.js", "TypeScript", "CognoDB", "Cypher", "Tailwind CSS"],
+    image: skillGraph,
+    category: "fullstack",
+    github: "https://github.com/ojingwaDaniel/skillGraph",
+    live: "https://skill-graph-drab.vercel.app/",
+  },
+  {
+    id: 3,
+    title: "BuildUp – Digital Marketing Agency Website",
+    description:
+      "A modern marketing agency website for BuildUp, designed to showcase digital marketing services, brand strategy, and growth solutions that help businesses turn ideas from vision to viral.",
+    tags: ["React JS", "Tailwind CSS", "Hostinger"],
+    image: bildup,
+    category: "frontend",
+    github: "https://github.com/ojingwaDaniel/Bildup-Agency-website",
+    live: "https://bildup.net/",
+  },
+  {
+    id: 4,
+    title: "Care Just 4U – Healthcare Support Website",
+    description:
+      "A mobile-friendly healthcare support website designed for Care Just 4U, showcasing compassionate care services, personalized support options, and a warm, trust-focused user experience.",
+    tags: ["React js", "UI Design", "Custom Css"],
+    image: care4u,
+    category: "frontend",
+    github: "https://github.com/GhubTeam/care-just4U",
+    live: "https://care-just-4-u.netlify.app/",
+  },
+  {
+    id: 5,
+    title: "Graciee's Foodstuff Export – Full-Stack Business Website",
+    description:
+      "A full-stack web application built with Laravel and Blade for backend management and React.js for the customer-facing frontend. The platform allows administrators to add, edit, and manage food products, while customers can browse premium food items and place orders easily via WhatsApp.",
+    tags: ["Laravel", "Blade", "React JS", "MySQL", "WhatsApp Ordering"],
+    image: gracieesFoodstuff,
+    category: "fullstack",
+    github: "https://github.com/ojingwaDaniel/Graciee-s-Foodstuff-Export",
+    live: "https://graciees-foodstuff-export.netlify.app/",
+  },
+  {
+    id: 6,
+    title: "Event IT Support & Network Setup",
+    description:
+      "Provided on-site IT support and network setup for event management programs.",
+    tags: ["IT Support", "Networking", "Event Tech"],
+    image: itSupport1,
+    category: "it-support",
+    featured: true,
+  },
+  {
+    id: 7,
+    title: "Audio-Visual & System Setup",
+    description:
+      "Handled system setup and technical support for live event presentations.",
+    tags: ["AV Setup", "Technical Support", "Events"],
+    image: itSupport2,
+    category: "it-support",
+  },
+  {
+    id: 8,
+    title: "Hardware & Device Support",
+    description:
+      "Provided hardware setup and troubleshooting during event operations.",
+    tags: ["Hardware Support", "Troubleshooting", "Events"],
+    image: itSupport3,
+    category: "it-support",
+  },
+  {
+    id: 9,
+    title: "On-site Technical Assistance",
+    description:
+      "Supported event teams with real-time technical assistance and system monitoring.",
+    tags: ["On-site Support", "IT Assistance", "Events"],
+    image: itSupport4,
+    category: "it-support",
+  },
+  {
+    id: 10,
+    title: "Event Technology Management",
+    description:
+      "Managed technical systems and ensured smooth IT operations throughout events.",
+    tags: ["Event Tech", "System Management", "IT Support"],
+    image: itSupport5,
+    category: "it-support",
+  },
+];
 
   const filters = [
     { id: "all", label: "All Projects", icon: Code2 },
