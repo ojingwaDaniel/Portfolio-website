@@ -48,6 +48,7 @@ const Skills = () => {
       icon: Smartphone,
       skills: [
         { name: "React Native", level: 87, icon: Smartphone },
+        { name: "Flutter", level: 85, icon: Smartphone },
         { name: "Database Design", level: 85, icon: Database },
         { name: "MySQL/PostgreSQL", level: 88, icon: Database },
         { name: "MongoDB", level: 80, icon: Database },
