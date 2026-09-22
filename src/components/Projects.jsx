@@ -96,9 +96,8 @@ const Projects = () => {
       tags: ["Vue.js", "Tailwind CSS", "Responsive Design"],
       image: errandmate,
       category: "frontend",
-      // Add these when available:
-      // github: "https://github.com/...",
-      // live: "https://...",
+      github: "https://github.com/...",
+      live: "https://errandmate.netlify.app/",
     },
 
     {
