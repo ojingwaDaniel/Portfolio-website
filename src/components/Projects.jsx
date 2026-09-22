@@ -17,6 +17,7 @@ import bildup from "../../src/assets/bildup.png";
 import care4u from "../assets/care-4-U.png";
 import gracieesFoodstuff from "../assets/graciees-foodstuff.png";
 import jobBoard from "../assets/job-board.png";
+import errandmate from "../assets/errandmate.png";
 import foodWeb from "../assets/food.png";
 import itSupport1 from "../assets/it-support-1.jpeg";
 import itSupport2 from "../assets/it-support-2.jpeg";
@@ -89,18 +90,31 @@ const Projects = () => {
 
     {
       id: 6,
+      title: "ErrandMate – Errand & Delivery Platform",
+      description:
+        "A modern landing page for ErrandMate, a multi-sided platform connecting customers, runners, and merchants for errands, shopping, pickups, and local deliveries. The website showcases the platform ecosystem, real-time tracking, smart matching, secure payments, and seamless user experiences.",
+      tags: ["Vue.js", "Tailwind CSS", "Responsive Design"],
+      image: errandmate,
+      category: "frontend",
+      // Add these when available:
+      // github: "https://github.com/...",
+      // live: "https://...",
+    },
+
+    {
+      id: 7,
       title: "Restaurant Website",
       description:
         "A responsive restaurant website built with HTML, CSS, and JavaScript, designed to showcase the restaurant's menu, services, and brand while providing customers with a simple and engaging browsing experience.",
       tags: ["HTML", "CSS", "JavaScript"],
-      image:foodWeb,
+      image: foodWeb,
       category: "frontend",
       github: "https://github.com/ojingwaDaniel/foodapp",
       live: "https://ojingwadaniel.github.io/foodapp/#",
     },
 
     {
-      id: 7,
+      id: 8,
       title: "Care Just 4U – Healthcare Support Website",
       description:
         "A mobile-friendly healthcare support website designed for Care Just 4U, showcasing compassionate care services, personalized support options, and a warm, trust-focused user experience.",
@@ -112,7 +126,7 @@ const Projects = () => {
     },
 
     {
-      id: 8,
+      id: 9,
       title: "Event IT Support & Network Setup",
       description:
         "Provided on-site IT support and network setup for event management programs, ensuring reliable connectivity and smooth technical operations.",
@@ -123,7 +137,7 @@ const Projects = () => {
     },
 
     {
-      id: 9,
+      id: 10,
       title: "Audio-Visual & System Setup",
       description:
         "Handled audio-visual system setup and technical support for live event presentations, helping ensure smooth presentations and reliable equipment operation.",
@@ -133,7 +147,7 @@ const Projects = () => {
     },
 
     {
-      id: 10,
+      id: 11,
       title: "Hardware & Device Support",
       description:
         "Provided hardware setup, device configuration, and troubleshooting during event operations to keep technical equipment functioning properly.",
@@ -143,7 +157,7 @@ const Projects = () => {
     },
 
     {
-      id: 11,
+      id: 12,
       title: "On-site Technical Assistance",
       description:
         "Supported event teams with real-time technical assistance, troubleshooting, and system monitoring throughout event operations.",
@@ -153,7 +167,7 @@ const Projects = () => {
     },
 
     {
-      id: 12,
+      id: 13,
       title: "Event Technology Management",
       description:
         "Managed technical systems and supported IT operations throughout events, helping ensure that equipment and technology remained operational.",
