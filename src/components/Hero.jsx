@@ -155,7 +155,7 @@ const Hero = () => {
               {/* Stats – monochrome */}
               <div className="grid grid-cols-3 gap-4 mb-8">
                 {[
-                  { number: '50+', label: 'Projects' },
+                  { number: '15+', label: 'Projects' },
                   { number: '5+', label: 'Years Exp' },
                   { number: '100%', label: 'Satisfaction' },
                 ].map((stat, index) => (
