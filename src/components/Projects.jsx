@@ -1,3 +1,4 @@
+
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 import {
@@ -19,6 +20,7 @@ import gracieesFoodstuff from "../assets/graciees-foodstuff.png";
 import jobBoard from "../assets/job-board.png";
 import errandmate from "../assets/errandmate.png";
 import foodWeb from "../assets/food.png";
+import TstarStore from "../assets/tstarStore.png";
 import itSupport1 from "../assets/it-support-1.jpeg";
 import itSupport2 from "../assets/it-support-2.jpeg";
 import itSupport3 from "../assets/it-support-3.jpeg";
@@ -174,6 +176,19 @@ const Projects = () => {
       image: itSupport5,
       category: "it-support",
     },
+
+    // NEW PROJECT: T.STAR STORE
+    {
+      id: 14,
+      title: "T.STAR Store – Full-Stack E-commerce Platform",
+      description:
+        "A modern clothing e-commerce platform built for T.STAR, featuring a Vue.js storefront and Laravel backend. Designed around the brand's identity and motto, 'Wear The Difference', to provide customers with a modern online shopping experience.",
+      tags: ["Laravel", "Vue.js", "E-commerce"],
+      image: TstarStore,
+      category: "fullstack",
+      github: "https://github.com/ojingwaDaniel/T.Star-Store",
+      live: "https://tstarstore.netlify.app/",
+    },
   ];
 
   const filters = [
@@ -204,10 +219,12 @@ const Projects = () => {
               PORTFOLIO SHOWCASE
             </span>
           </span>
+
           <h2 className="text-4xl md:text-5xl font-heading font-bold text-black dark:text-white mb-6">
             Featured{" "}
             <span className="text-gray-600 dark:text-gray-400">Work</span>
           </h2>
+
           <p className="text-xl text-gray-600 dark:text-gray-300 font-body max-w-2xl mx-auto">
             Showcasing both development projects and hands-on IT support
             experience
@@ -261,6 +278,7 @@ const Projects = () => {
                   className="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-110"
                   style={{ backgroundImage: `url(${project.image})` }}
                 />
+
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent" />
 
                 {/* Category Badge */}
@@ -299,6 +317,7 @@ const Projects = () => {
                       <Github className="w-5 h-5 text-white" />
                     </a>
                   )}
+
                   {project.live && project.live !== "#" && (
                     <a
                       href={project.live}
@@ -319,6 +338,7 @@ const Projects = () => {
                   <h3 className="text-xl font-heading font-bold text-black dark:text-white mb-2 group-hover:text-gray-600 dark:group-hover:text-gray-400 transition-colors">
                     {project.title}
                   </h3>
+
                   <p className="text-gray-600 dark:text-gray-300 font-body text-sm line-clamp-3">
                     {project.description}
                   </p>
@@ -384,6 +404,7 @@ const Projects = () => {
               <span className="mr-3">Discuss Your Project</span>
               <ExternalLink className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </a>
+
             <a
               href="/Ojingwa_Daniel_Nmesoma_CV.docx"
               className="inline-flex items-center px-8 py-4 rounded-full border border-gray-300 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-gray-800 transition-all duration-300 group font-body font-medium text-gray-700 dark:text-gray-300"
