@@ -20,7 +20,7 @@ import gracieesFoodstuff from "../assets/graciees-foodstuff.png";
 import jobBoard from "../assets/job-board.png";
 import errandmate from "../assets/errandmate.png";
 import foodWeb from "../assets/food.png";
-import TstarStore from "../assets/tstarStore.png";
+import TstarStore from "../assets/TstarStore.png"
 import itSupport1 from "../assets/it-support-1.jpeg";
 import itSupport2 from "../assets/it-support-2.jpeg";
 import itSupport3 from "../assets/it-support-3.jpeg";
