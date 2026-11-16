@@ -53,6 +53,17 @@ const Projects = () => {
       category: "fullstack",
       github: "https://github.com/ojingwaDaniel/Job-Board",
     },
+    {
+      id: 14,
+      title: "T.STAR Store – Full-Stack E-commerce Platform",
+      description:
+        "A modern clothing e-commerce platform built for T.STAR, featuring a Vue.js storefront and Laravel backend. Designed around the brand's identity and motto, 'Wear The Difference', to provide customers with a modern online shopping experience.",
+      tags: ["Laravel", "Vue.js", "E-commerce"],
+      image: TstarStore,
+      category: "fullstack",
+      github: "https://github.com/ojingwaDaniel/T.Star-Store",
+      live: "https://tstarstore.netlify.app/",
+    },
 
     {
       id: 3,
@@ -177,18 +188,7 @@ const Projects = () => {
       category: "it-support",
     },
 
-    // NEW PROJECT: T.STAR STORE
-    {
-      id: 14,
-      title: "T.STAR Store – Full-Stack E-commerce Platform",
-      description:
-        "A modern clothing e-commerce platform built for T.STAR, featuring a Vue.js storefront and Laravel backend. Designed around the brand's identity and motto, 'Wear The Difference', to provide customers with a modern online shopping experience.",
-      tags: ["Laravel", "Vue.js", "E-commerce"],
-      image: TstarStore,
-      category: "fullstack",
-      github: "https://github.com/ojingwaDaniel/T.Star-Store",
-      live: "https://tstarstore.netlify.app/",
-    },
+   
   ];
 
   const filters = [
